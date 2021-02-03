@@ -1,0 +1,33 @@
+//ACCREDITAMENTO
+
+const fetch = require('node-fetch');
+fetch("http://192.168.1.231:8080/accreditamento", {
+    method: "post",
+    body : JSON.stringify({nome : "Riccardo Consiglio"}) ,
+    headers : {"Content-Type" : "Application/json"} 
+
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
+
+//RICHIESTA ESERCIZIO E DATI
+
+fetch("http://192.168.1.231:8080/esercizi/1", {
+    method: "get",
+    headers : {"x-data" : "True"} 
+})
+
+//CONSEGNA RISULTATI
+
+.then(response => response.json())
+//.then(data => {/*ESERCIZIO*/} )
+fetch("http://192.168.1.231:8080/esercizi/1", {
+    method: "post",
+    body : JSON.stringify({data}) ,
+    headers : {"Content-Type" : "Application/json"} 
+
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
