@@ -27,3 +27,5 @@ const es1 = () => {
     .then(resBody => console.log(resBody))
     .catch(err => console.log(err))
 }
+
+es1()
