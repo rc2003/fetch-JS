@@ -1,3 +1,4 @@
+const fetch = require("node-fetch")
 const es1 = () => {
     fetch("http://192.168.1.231:8080/esercizi/1", {
         headers: {
