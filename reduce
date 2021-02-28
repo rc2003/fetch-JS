@@ -13,7 +13,7 @@ const es1 = () => {
       
       console.log(risultato)
   
-      return fetch("http://localhost:8080/esercizi/1", {
+      return fetch("http://192.168.1.231:8080/esercizi/1", {
         method: "post",
         body: JSON.stringify({
           data: risultato
