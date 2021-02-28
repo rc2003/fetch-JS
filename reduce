@@ -9,7 +9,7 @@ const es1 = () => {
       const reqData = resBody.data
       const risultato = reqData.reduce((acc, val) => {
         return acc+=val
-        }, 0}
+        }, 0)
       
       console.log(risultato)
   
