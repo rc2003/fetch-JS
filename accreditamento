@@ -16,4 +16,4 @@ const accreditamento = () => {
   .catch(err => console.log(err))
 }
 
-
+accreditamento()
